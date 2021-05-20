@@ -16,6 +16,7 @@ const initialState = {
       body: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque earum?',
     },
   ],
+  users: [],
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -27,6 +28,11 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         cards: newCard,
+      }
+    case 'FETCH_USERS':
+      return {
+        ...state,
+        users: action.payload,
       }
     default:
       return state
