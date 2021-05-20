@@ -1,7 +1,10 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = (props) => {
+  // setTimeout(() => {
+  //   props.history.push('/about')
+  // }, 2000)
   return (
     <nav className='ui raised very padded segment'>
       <a className='ui teal inverted segment'>Gloria</a>
@@ -20,4 +23,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default withRouter(Navbar)
