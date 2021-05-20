@@ -10,7 +10,7 @@ const Contact = ({ cards }) => {
       {cards.map((card) => {
         return (
           <div
-            class='ui raised very padded text container segment'
+            className='ui raised very padded text container segment'
             style={{ marginTop: '80px' }}
             key={card.id}
           >
